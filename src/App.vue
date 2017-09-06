@@ -44,7 +44,7 @@ export default {
     return {
       names:["石根厚","石建军","石正厚","刘占宽","刘耀清","贾六","石俊梅","刘飞","刘文明","高文利","高四孬","高文军","袁富存","尚文忠","贾乐","石栓柱","李龙","李海龙","王露","王桂香","王焕树","王二兵","韩凤英","王有罕","王山崎","杜茂仁","刘海欢","康桃花","杜元晓","张海宝","高建明","张飞雄","刘御","张润佘","张永强","郭三梅","杜云","魏红","刘继牛","郭武莱","高桂清","杜永强","杜文渊","高二媛","王二锁","王志宏","李金云","李欣媛","戴双宝","王焕锁","孙瑞军","石飞鹏","石胜厚","康振清","王禅","高志新","刘飞云","刘二云","刘三正","刘东","刘双正","namesNum","vShow","noComeName"],
       namesNum:'',
-      name:'开始点名',
+      name:'点击姓名可以重播哦',
       vShow:true,
       noComeName:[],
       callNames:[],
@@ -135,14 +135,14 @@ export default {
       this.audioSrc=this.srcs[this.activeIndex]
       this.name=this.callNames[this.activeIndex]
       if(this.activeIndex == this.namesNum && this.noComeName.length==0){
-        this.name='点名结束'
+        this.name='じò ぴé 今天人员全部到齐，漂亮！'
         this.over=true;
         this.enabled1=true;
         this.enabled2=false;
-        this.audioSrc = "http://fanyi.baidu.com/gettts?lan=zh&text="+encodeURI('点名结束,今天人员全部到齐，漂亮！')+"&spd=5&source=web"
+        this.audioSrc = "http://fanyi.baidu.com/gettts?lan=zh&text="+encodeURI('今天人员全部到齐，漂亮！')+"&spd=5&source=web"
       }
       if(this.activeIndex == this.namesNum && this.noComeName.length!=0){
-        this.name='点名结束'
+        this.name='点名结束，让我逮到了吧└(^o^)┘'
         this.over=true;
         this.enabled1=true;
         this.enabled2=false;
@@ -178,6 +178,10 @@ export default {
     font-size:18px;
     line-height: 1.5;
     padding-left: 10px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    border: 1px solid #222;
   }
   .come,.over{
     margin-top: 80px;
