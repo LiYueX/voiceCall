@@ -113,7 +113,12 @@ export default {
       }else if(Number(this.namesNum)<=0){
         this.namesNum=this.names.length
       }
-      this.enabled1=false
+      console.log(this.callNames.length)
+      if(this.callNames.length==0){
+        this.enabled1=false
+      }else{
+        this.enabled1=true
+      }
       this.enabled2=false
     },
     reCall(){//重新点名
