@@ -9,7 +9,7 @@ module.exports = {
     filename: 'build.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.vue$/,
         loader: 'vue-loader'
@@ -25,12 +25,17 @@ module.exports = {
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
-        loader: 'file-loader'
+        loader: 'url-loader',
+        query: {
+          limit: 500000,
+          name: '[name].[ext]?[hash]'
+        }
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
         query: {
+          limit: 500000,
           name: '[name].[ext]?[hash]'
         }
       }
